@@ -1,0 +1,37 @@
+SQL Queries for PHP project DB:
+
+// create users table containing all the information from sign up form
+CREATE TABLE users (
+	usersId int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    usersName varchar(128) NOT NULL,
+    usersEmail varchar(128) NOT NULL,
+    usersUid varchar(128) NOT NULL,
+    usersPwd varchar(128) NOT NULL
+);
+
+// create profileImg table containing profile images uploaded by users
+CREATE TABLE profileImg (
+    profileImgId int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    profileImgUserid int(11) NOT NULL,
+    profileImgFilename varchar(256) NOT NULL,
+    status int(11) NOT NULL
+);
+
+// create table for measurements
+CREATE TABLE `sensorData` (
+  `sensorDataId` int(2) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `sensorDataDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `sensorDataTemp` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+// create img table containing user uploaded content
+// changed to user specific folders
+CREATE TABLE user'$userId'content (
+    userImgId int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    userImgFilename varchar(256) NOT NULL
+);
+
+
+// ternary operator (if else) for login form
+<a href="login.php?uid=janek"></a>
+<input type="text" name="uid" placeholder="Username/Email..." value="<?= isset($_GET["uid"])?$_GET["uid"]:"" ?>">

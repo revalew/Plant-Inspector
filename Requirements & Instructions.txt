@@ -1,0 +1,11 @@
+To launch this website the following software is needed:
+	- XAMPP configured with VirtualHost with the "plantinspector.com" name (https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.0/xampp-windows-x64-8.2.0-0-VS16-installer.exe/download),
+	- code editor of choice, like VSCode (https://code.visualstudio.com/docs/?dv=win) (optional).
+All of the libraries used in this project are contained in this folder. The SQL Database, and file with queries used to create it, are also included.
+
+On a first launch of a server it is recomended to update the database credentials in "Project IT\plantinspector.com\public_html\includes\dbh.inc.php" file.
+
+This project was designed and created to work on a Raspberry Pi, which may result in some features not working on a standard PC and without the custom circuit, like:
+	- data collection,
+	- data upload,
+	- remote script execution.
